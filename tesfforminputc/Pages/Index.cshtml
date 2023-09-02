@@ -1,0 +1,72 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "forminput";
+}
+<script src="js/site.js"></script>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h1 class="card-title text-center">Form Input Data</h1>
+                    <form action="#">
+                        <table align="center">
+                            <tr>
+                                <td>
+                                    <label for="country">Negara</label>
+                                </td>
+                                <td>
+                                    <input type="text" name="country" id="country" oninput="getCountry(value)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="harbor">Pelabuhan</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="harbor" name="harbor" oninput="getHarbor(value)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" style="vertical-align: top;">
+                                    <label for="goods">Barang</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="goods" name="goods" oninput="getDataDetail(value)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input style="height: 50px;" type="text" id="detail" name="detail">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="price">Harga</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="price" name="price" oninput="getTotal(value)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" style="vertical-align: top;">
+                                    <label for="tax">Tarif Bea Masuk</label>
+                                </td>
+                                <td>
+                                    <input style="width: 30px;" type="text" id="tax" name="tax" disabled>
+                                    <p style="display: inline"> %</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" id="total" name="total" disabled>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
